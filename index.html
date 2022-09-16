@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a53ae6f63a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Ninja Music Player</title>
+  </head>
+  <body>
+    <!-- =================================== HEADER ============================================== -->
+    <header>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li onclick="homePage()" class="header__favicon">
+            <div class="header__list_emo">
+              <i class="fa-solid fa-face-grin-hearts"></i>
+            </div>
+            <div class="header__list_music">
+              <i class="fa-solid fa-music"></i>
+              <div>Ninja <br /><span>Studios</span></div>
+            </div>
+          </li>
+          <li class="header__favorites">
+          Favorites
+        </li>
+          <li class="header__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search" />
+            <i class="fa-solid fa-microphone"></i>
+          </li>
+          <li class="header__bell">
+            <i class="fa-solid fa-bell"></i>
+          </li>
+          <li class="header__profile">
+            <div><img src="./artist/4.jpg" alt="profilepic" /></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ======================================== MAIN ============================================ -->
+    <main>
+      <div id="main">
+        <!-- -------------------------------Caousel--------------------------------- -->
+        <section id="carousel">
+        <div class="carousel__container" id="carousel-container">
+          <div
+            onmouseover="carouselHover(0)"
+            onmouseout="carouselHoverOff(0)"
+            class="carousel__item"
+          >
+            <img src="./carousel/1.jpg" alt="..." />
+          </div>
+          <div
+            onmouseover="carouselHover(1)"
+            onmouseout="carouselHoverOff(1)"
+            class="carousel__item"
+          >
+            <img src="./carousel/2.jpg" alt="..." />
+          </div>
+          <div
+            onmouseover="carouselHover(2)"
+            onmouseout="carouselHoverOff(2)"
+            class="carousel__item"
+          >
+            <img src="./carousel/3.jpg" alt="..." />
+          </div>
+          <div
+            onmouseover="carouselHover(3)"
+            onmouseout="carouselHoverOff(3)"
+            class="carousel__item"
+          >
+            <img src="./Images/spotifyimage.jpg" alt="..." />
+          </div>
+          <div
+            onmouseover="carouselHover(4)"
+            onmouseout="carouselHoverOff(4)"
+            class="carousel__item"
+          >
+            <img src="./Images/spotifyimage.jpg" alt="..." />
+          </div>
+        </div>
+      </section>
+      <!-- ---------------------------------LATEST RELEASE-------------------------------------------- -->
+      <section id="release">
+        <h4>Latest Release</h4>
+        <div class="release__container">
+          <div class="release__item">
+            <div class="release__item-img">
+              <img src="./Images/bw.png" alt="" />
+              <div onclick="slavePlay(0)" class="release__item-overlay">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>  
+            <div class="release__title-info">
+              <h5>Damn</h5>
+              <p>Aug 11, 2022</p>
+            </div>
+            <div class="release__title-time">
+              <p>...</p>
+              <p>4.44</p>
+            </div>
+          </div>
+          <div class="release__item">
+            <div class="release__item-img">
+              <img src="./Images/bw.png" alt="" />
+              <div onclick="slavePlay(1)" class="release__item-overlay">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="release__title-info">
+              <h5>Damn</h5>
+              <p>Aug 11, 2022</p>
+            </div>
+            <div class="release__title-time">
+              <p>...</p>
+              <p>4.44</p>
+            </div>
+          </div>
+          <div class="release__item">
+            <div class="release__item-img">
+              <img src="./Images/bw.png" alt="" />
+              <div onclick="slavePlay(2)" class="release__item-overlay">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="release__title-info">
+              <h5>Damn</h5>
+              <p>Aug 11, 2022</p>
+            </div>
+            <div class="release__title-time">
+              <p>...</p>
+              <p>4.44</p>
+            </div>
+          </div>
+          <div class="release__item">
+            <div class="release__item-img">
+              <img src="./Images/bw.png" alt="" />
+              <div onclick="slavePlay(3)" class="release__item-overlay">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="release__title-info">
+              <h5>Damn</h5>
+              <p>Aug 11, 2022</p>
+            </div>
+            <div class="release__title-time">
+              <p>...</p>
+              <p>4.44</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------- ARTISTS ----------------------------------------- -->
+      <section id="artists">
+        <h4>Popular Artists</h4>
+        <div class="artists__container">
+          <div  class="artists__items">
+            <img src="./kendrick.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+          <div class="artists__items">
+            <img src="./al.jpg" alt="" />
+            <h6>Kendric Lamar</h6>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------------Music Stations ----------------------------------------- -->
+      <section id="stations">
+        <div class="stations__container">
+          <div class="stations__item1">
+            <div class="bg-1"></div>
+            <div class="bg-2"></div>
+            <div class="stations__item1-container">
+              <img src="./Images/dvd-disk-icon.svg" alt="" />
+              <h6>Stations</h6>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./covers/10.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Love</div>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./covers/1.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Retro</div>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./Genres/1.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Workout</div>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./Genres/2.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Chill</div>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./covers/9.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Pop</div>
+            </div>
+          </div>
+          <div class="stations__item2">
+            <div class="stations__item-img">
+              <img src="./covers/7.jpg" alt="" />
+              <div class="stations__item-overlay overlay">Rap</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ---------------------------------------- Music Genres ---------------------------------------- -->
+      <section id="genres">
+        <div class="genres__container">
+          <div class="genres__item">
+            <img src="./Genres/1.jpg" alt="" />
+            <div class="genres__item-overlay">Party</div>
+          </div>
+          <div class="genres__item">
+            <img src="./Genres/2.jpg" alt="" />
+            <div class="genres__item-overlay">Electronic</div>
+          </div>
+          <div class="genres__item">
+            <img src="./Genres/3.jpg" alt="" />
+            <div class="genres__item-overlay">Road Trip</div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------------ Latest English Songs--------------------------------------- -->
+      <section id="english">
+        <h4>Latest English</h4>
+        <div class="english__container container">
+          <div class="english__items items">
+            <img src="./covers/1.jpg" alt="" />
+            <h5 class="songName">Summatime</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/2.jpg" alt="" />
+            <h5 class="songName">Yesterday</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/3.jpg" alt="" />
+            <h5 class="songName">Rough Soul</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/4.jpg" alt="" />
+            <h5 class="songName">Bubblin</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/5.jpg" alt="" />
+            <h5 class="songName">Money Trees</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/6.jpg" alt="" />
+            <h5 class="songName">DNA</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/7.jpg" alt="" />
+            <h5 class="songName">Rough Soul</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/8.jpg" alt="" />
+            <h5 class="songName">Wassup</h5>
+            <p></p>
+          </div>
+          <div class="english__items items">
+            <img src="./covers/9.jpg" alt="" />
+            <h5 class="songName">Mocking Bird</h5>
+            <p></p>
+          </div>
+        </div>
+      </section>
+<!-- -------------------------------------------------Lastest Hindi Songs ------------------------------------------ -->
+      <section id="hindi">
+        <h4>Lastest Hindi</h4>
+        <div class="hindi__container container">
+          <div class="hindi__items items">
+            <img src="./covers/10.jpg" alt="" />
+            <h5>Tum Ho</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/9.jpg" alt="" />
+            <h5>Sadda Haq</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/8.jpg" alt="" />
+            <h5>Nadaan Parindey</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/7.jpg" alt="" />
+            <h5>Humma Humma</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/6.jpg" alt="" />
+            <h5>Main Deewana</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/5.jpg" alt="" />
+            <h5>Tumse hi</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/4.jpg" alt="" />
+            <h5>Maula Mere</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/3.jpg" alt="" />
+            <h5>Aafat</h5>
+            <p></p>
+          </div>
+          <div class="hindi__items items">
+            <img src="./covers/2.jpg" alt="" />
+            <h5>Lafde</h5>
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- =-================================================= Playlist ==================================================== -->
+    <section id="playlist" class="playlist">
+      <div id="artist-data" class="playlist__artist">
+        <img src="./kendrick.jpg" alt="">
+        <div class="playlist__artist-info">
+         <h3>Kendrick Lamar</h3>
+         <h6>American Rapper</h6>
+         <p>Kendrick Lamar Duckworth (born June 17, 1987) is an American rapper, songwriter, and record producer. He is often cited as one of the most influential rappers of his generation. Aside from his solo career, he is also a member of the hip hop supergroup Black Hippy alongside his former Top Dawg Entertainment (TDE) labelmates Ab-Soul, Jay Rock, and Schoolboy Q. </p>
+        <div class="playlist__btn">
+          <button id="playlistPlay">Play All</button>
+          <h6>128 Tracks | 15 Albums</h6>
+        </div>
+        </div>
+      </div>
+      <div class="playlist__list">
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="playlist__list-item">
+          <p>01</p>
+          <img src="./Images/bw.png" alt="" />
+          <div class="playlist__list-info">
+            <h5 class="songName">DNA</h5>
+            <p>Damn</p>
+          </div>
+          <div class="playlist__list-icons">
+            <i class="fa fa-heart-o"> </i>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    </main>
+    <!-- ================================================ SIDEBAR ============================================= -->
+    <aside >
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar__title">
+          <h4>Queue</h4>
+          <p>Queue</p>
+        </div>
+        <div class="sidebar__queue queue">
+          <div class="sidebar__item">
+            <p>01</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>02</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>03</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>04</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>05</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>06</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>07</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>08</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>09</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>10</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>11</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>12</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>13</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>14</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>15</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>16</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>17</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>18</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>19</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="sidebar__item">
+            <p>20</p>
+            <img src="./Images/bw.png" alt="" />
+            <div class="sidebar__item-info">
+              <h5 class="songName">DNA</h5>
+              <p></p>
+            </div>
+            <i class="fa fa-heart-o"></i>
+          </div>
+        </div>
+      </div>
+      <!-- =================================================== PLaylist Screen Aside Section ================================================== -->
+      <section id="playlistAside" class="playlist__side">
+        <div class="similar-artists">
+
+          <div  class="sidebar2">
+            <div class="sidebar__title">
+              <h4>Similar Artists</h4>
+              <p>Views</p>
+            </div>
+            <div class="sidebar__queue queue">
+              <div class="sidebar__item2">
+                <p>01</p>
+                <img src="./artist/6.jpg" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">Russ</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <div class="sidebar__item2">
+                <p>02</p>
+                <img src="./artist/5.jpg" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">Eminem</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <div class="sidebar__item2">
+                <p>03</p>
+                <img src="./artist/4.jpg" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">Goldlink</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+        </div>
+        <div class="recently-played">
+          <div  class="sidebar2">
+            <div class="sidebar__title">
+              <h4>Recently Played</h4>
+              <p>View</p>
+            </div>
+            <div class="sidebar__queue queue">
+              <div class="sidebar__item">
+                <p>01</p>
+                <img src="./Images/bw.png" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">DNA</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <div class="sidebar__item">
+                <p>02</p>
+                <img src="./Images/bw.png" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">DNA</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <div class="sidebar__item">
+                <p>03</p>
+                <img src="./Images/bw.png" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">DNA</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+              <div class="sidebar__item">
+                <p>04</p>
+                <img src="./Images/bw.png" alt="" />
+                <div class="sidebar__item-info">
+                  <h5 class="songName">DNA</h5>
+                  <p></p>
+                </div>
+                <i class="fa fa-heart-o"></i>
+              </div>
+
+        </div>
+        
+      </section>
+    </aside>
+    <!-- =================================================FOOTER Player Controls====================================== -->
+    <footer id="footer">
+      <div class="footer__artist">
+        <div class="footer__artist-container">
+          <img id="masterCover" src="./Images/bw.png" alt="" />
+          <div class="footer__artist-info">
+            <h5 id="masterSongName">Humble by Kendrick</h5>
+            <p></p>
+          </div>
+          <div class="footer__artist-icon">
+            <i class="fa-solid fa-heart"></i>&nbsp;
+            <i class="fa-solid fa-ban"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer__controls">
+        <div class="footer__controls-play-icons">
+          <i class="fa-solid fa-shuffle"></i>
+          <i id="previous" class="fa-solid fa-backward-step"></i>
+         
+          <i
+            style="font-size: 20px"
+            id="masterPlay"
+            class="fa-regular fa-circle-play"
+          ></i>
+          <i id="next" class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+        <div class="footer__controls-play">
+          <p>1:44</p>
+
+          <input id="myProgressBar" type="range" value="0" min="0" max="100" />
+          <p>4:30</p>
+        </div>
+      </div>
+      <div class="footer__volume">
+        <i  onclick="screenToggle()" class="fa-solid fa-list"></i>
+        <i id="volumeIcon" onclick="volumeToggle()" class="fa-solid fa-volume-high"></i>
+        <input type="range" id="volumeBar" value="10" min="0" max="100" />
+        <i onclick="screenToggle()" id="screenIcon" class="fa-solid fa-down-left-and-up-right-to-center"></i>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
